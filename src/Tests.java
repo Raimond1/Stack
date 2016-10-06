@@ -73,5 +73,12 @@ public class Tests {
 		Stack stack = new Stack();
 		stack.peek();
 	}
-	
+	@Test
+	public void sameSizeAfterPeek() {
+		Stack stack = new Stack();
+		stack.push(5);
+		stack.push(7);
+		stack.peek();
+		assertThat(stack.getSize(), is(2));
+	}
 }
